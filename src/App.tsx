@@ -8,25 +8,25 @@ import { Routes, Route } from "react-router";
 const MOCK_Data = [
   {
     id: 1,
-    text: "New1",
+    text: "Thông báo về buổi tư vấn tuyển sinh Chương trình đào tạo trình độ thạc sĩ đợt 1 năm 2024",
     link: "abc",
     date: "12/11/2006",
   },
   {
     id: 2,
-    text: "New2",
+    text: "Thông báo lịch thi tập trung Giữa kỳ học kỳ 2 năm học 2023-2024",
     link: "abc",
     date: "12/11/2006",
   },
   {
     id: 3,
-    text: "New3",
+    text: "Thông báo về việc thực hiện chuẩn quá trình ngoại ngữ theo Quy định đào tạo ngoại ngữ đối với hệ đại học chính quy từ học kỳ 1 năm học 2024-2025",
     link: "abc",
     date: "12/11/2006",
   },
   {
     id: 4,
-    text: "New4",
+    text: "Thông báo danh sách và lịch thi tập trung Giữa kỳ học kỳ 1 năm học 2023-2024",
     link: "abc",
     date: "12/11/2006",
   },
@@ -80,35 +80,33 @@ const MOCK_DATA_Card2 = [
 ];
 function App() {
   return (
-    <div>
+    <div className="grid-cols-4">
       <NavBar />
-      <nav>
+      <nav className="col-span-1">
         <ul>
-          <li>
-            <a href="Card1&Login">Card1&Login</a>
-          </li>
-          <li>
-            <a href="/Card2">Card2</a>
-          </li>
+          <div className="grid grid-cols-4">
+            <div className="col-span-1">
+              <Login />
+              <Card title="Tin nổi bật" list={MOCK_Data} />
+              <li>
+                <a href="/Card2">Xem thêm</a>
+              </li>
+            </div>
+            <div className="col-span-3"></div>
+          </div>
         </ul>
       </nav>
+
       <Routes>
-        <Route
-          path="/Card1&Login"
-          element={
-            <div className="grid grid-cols-4">
-              <div className="col-span-1">
-                <Login />
-                <Card title="Hướng dẫn" list={MOCK_Data} />
-              </div>
-              <div className="col-span-3"></div>
-            </div>
-          }
-        />
         <Route
           path="/Card2"
           element={
-            <Card2 titleNew="PHÒNG DỮ LIỆU & CNTT" listNew={MOCK_DATA_Card2} />
+            <div className="col-span-3">
+              <Card2
+                titleNew="PHÒNG DỮ LIỆU & CNTT"
+                listNew={MOCK_DATA_Card2}
+              />
+            </div>
           }
         />
       </Routes>
