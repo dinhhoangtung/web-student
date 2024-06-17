@@ -14,7 +14,7 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className=" p-3 flex items-center justify-center  border-slate-950">
+    <div className=" p-3 flex items-center   border-slate-950">
       <div className="bg-white border-slate-950 rounded-lg shadow-lg w-96">
         <div className="rounded-t-lg flex p-3 bg-gradient-to-r from-slate-300 to-slate-100">
           <h2 className="pl-3 text-xl font-bold  text-blue-500">Đăng nhập</h2>
@@ -22,7 +22,7 @@ const Login: React.FC = () => {
         <form onSubmit={handleSubmit} className="p-3 pr-8">
           <div className="mb-4 ">
             <label
-              className="block font-sans text-sm font-bold text-[#333] mb-2"
+              className="text-left block font-sans text-sm font-bold text-[#333] mb-2"
               htmlFor="name"
             >
               Tên người dùng *
