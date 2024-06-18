@@ -87,12 +87,24 @@ function App() {
           <div className="grid grid-cols-4">
             <div className="col-span-1">
               <Login />
-              <Card title="Tin nổi bật" list={MOCK_Data} />
-              <li>
-                <a href="/Card2">Xem thêm</a>
-              </li>
+              <div className="justify-center">
+                <Card title="Tin nổi bật" list={MOCK_Data} />
+              </div>
             </div>
-            <div className="col-span-3"></div>
+            <div className="col-span-3">
+              <div>
+                <div className=" p-3 ">
+                  <Card title="THÔNG BÁO CHUNG" list={MOCK_Data} />
+                  <Card title="THÔNG BÁO VĂN BẰNG 2" list={MOCK_Data} />
+                  <Card
+                    title="THÔNG BÁO LIÊN THÔNG CHÍNH QUY"
+                    list={MOCK_Data}
+                  />
+                  <Card title="THÔNG BÁO NGHỈ BÙ" list={MOCK_Data} />
+                  <Card title="THÔNG BÁO PHÒNG HỌC" list={MOCK_Data} />
+                </div>
+              </div>
+            </div>
           </div>
         </ul>
       </nav>

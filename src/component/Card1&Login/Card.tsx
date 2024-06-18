@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router";
 type Item = {
   id: number;
   text: string;
@@ -13,8 +14,8 @@ const Card = (props: CardProps) => {
   const { title, list } = props;
 
   return (
-    <div className="rounded-lg shadow-xl border border-gray-400 gap-5    items-center">
-      <h3 className="text-[13px] font-bold py-3 px-4 bg-gradient-to-r from-slate-600 to-white rounded-t-lg border-gray-400">
+    <div className="rounded-lg shadow-xl border border-gray-400 p-3 gap-5 items-center">
+      <h3 className="items-center text-[13px] font-bold py-3 px-4 bg-gradient-to-r from-slate-600 to-white rounded-t-lg border-gray-400">
         {title}
       </h3>
       <ul className="gap-5 font-sans px-[5px] py-[10px] items-center text-align ">
@@ -25,6 +26,9 @@ const Card = (props: CardProps) => {
           </li>
         ))}
       </ul>
+      <li>
+        <a href="/Card">Xem thêm</a>
+      </li>
     </div>
   );
 };
