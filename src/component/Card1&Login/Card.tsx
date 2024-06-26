@@ -26,7 +26,7 @@ const Card = (props: CardProps) => {
         ))}
       </ul>
       <li>
-        <a href="/Card">Xem thêm</a>
+        <a href="/Card2">Xem thêm</a>
       </li>
     </div>
   );

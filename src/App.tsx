@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Card2 from "./component/Card 2/Card2";
 import Card from "./component/Card1&Login/Card";
@@ -78,7 +79,13 @@ const MOCK_DATA_Card2 = [
     note: "Địa chỉ website môn học: https://courses.uit.edu.vn, dùng tài khoản chứng thực để đăng nhập (cho SV & GV). Đây là hệ thống hỗ trợ học tập của sinh viên và giảng dạy của giảng viên, nếu khai thác tốt hệ thống này sẽ trở thành kênh thông tin môn học rất...",
   },
 ];
+
 function App() {
+  const DisplayNew = () => {
+    const [activeNew, setActiveNew] = useState(0);
+
+    const handleClick = () => {};
+  };
   return (
     <div className="grid-cols-4">
       <NavBar />
@@ -93,6 +100,19 @@ function App() {
             </div>
             <div className="col-span-3">
               <div>
+                <Routes>
+                  <Route
+                    path="/Card2"
+                    element={
+                      <div className="col-span-3">
+                        <Card2
+                          titleNew="PHÒNG DỮ LIỆU & CNTT"
+                          listNew={MOCK_DATA_Card2}
+                        />
+                      </div>
+                    }
+                  />
+                </Routes>
                 <div className=" p-3 ">
                   <Card title="THÔNG BÁO CHUNG" list={MOCK_Data} />
                   <Card title="THÔNG BÁO VĂN BẰNG 2" list={MOCK_Data} />
@@ -108,20 +128,6 @@ function App() {
           </div>
         </ul>
       </nav>
-
-      <Routes>
-        <Route
-          path="/Card2"
-          element={
-            <div className="col-span-3">
-              <Card2
-                titleNew="PHÒNG DỮ LIỆU & CNTT"
-                listNew={MOCK_DATA_Card2}
-              />
-            </div>
-          }
-        />
-      </Routes>
     </div>
   );
 }
