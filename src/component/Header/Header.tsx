@@ -4,174 +4,130 @@ import { IoHome } from "react-icons/io5";
 const Item_List = [
   {
     id: 1,
-    title: "Trang chủ",
+    title: "Giới thiệu ",
     submenuList: [
       {
         id: 11,
-        title: "Chức năng ",
-        link: "/",
+        title: "Cổng thông tin đào tạo ",
+        link: "/CongTTDT",
       },
       {
         id: 12,
-        title: "Nhiệm vụ",
-        link: "/",
+        title: "Các ngành đào tạo",
+        link: "/cac-nganh-dt",
       },
       {
         id: 13,
-        title: "Nhân sự ",
-        link: "/",
+        title: "Phòng đào tạo đại học ",
+        herf: "/phong-dt-dh",
       },
     ],
   },
   {
     id: 2,
-    title: "Giới thiệu ",
+    title: "Thông báo ",
     submenuList: [
       {
         id: 20,
-        title: "Chức năng ",
-        link: "/",
+        title: "Đại học chính quy ",
+        link: "/Dh-chinh-quy",
       },
       {
         id: 21,
-        title: "Nhiệm vụ",
-        link: "/",
+        title: "Văn bằng 2",
+        link: "/VB-2",
       },
       {
         id: 22,
-        title: "Nhân sự ",
-        link: "/",
+        title: "Đào tạo từ xa ",
+        link: "/Đt-tu-xa",
       },
     ],
   },
   {
     id: 3,
-    title: "Thông tin- Thông báo",
+    title: "Quy đinh- Hướng dẫn",
     submenuList: [
       {
         id: 30,
-        title: "Thông tin- Thông báo",
-        link: "/",
+        title: "Quy chế, quy định đào tạo đại học ",
+        link: "/qui-che-qui-dinh-qui-trinh",
       },
       {
         id: 31,
-        title: "Tin tức CNTT",
-        link: "/",
+        title: "Quy chế tuyển sinh đại học TXQM",
+        link: "/quy-che-tuyen-sinh-dai-hoc-txqm",
       },
       {
         id: 32,
-        title: "Hướng dẫn ",
-        link: "/",
+        title: "Qui chế về công tác giáo trình ",
+        link: "https://daa.uit.edu.vn/sites/daa/files/uploads/53_qd_dhcntt_19_2_2019scan.pdf",
+      },
+      {
+        id: 33,
+        title: "Quy định đào tạo ngắn hạn",
+        link: "/quy-dinh-dao-tao-ngan-han",
+      },
+      {
+        id: 34,
+        title: "Quy trình cho giảng viên",
+        link: "/quy-trinh-danh-cho-can-bo-giang-day",
+      },
+      {
+        id: 35,
+        title: "Quy trình cho sinh viên",
+        link: "/mot-so-quy-trinh-danh-cho-sinh-vien",
+      },
+      {
+        id: 36,
+        title: "Tra cứu và xác minh VB tốt nghiệp ĐH",
+        link: "/huong-dan-tra-cuu-va-xac-minh-van-bang-tot-nghiep-dai-hoc",
+      },
+      {
+        id: 37,
+        title: "Hướng dẫn sinh viên về các quy định ngoại ngữ   ",
+        link: "/huong-dan-sinh-vien-dai-hoc-he-chinh-quy-thuc-hien-cac-quy-dinh-ve-chuan-qua-trinh-va-chuan",
+      },
+      {
+        id: 38,
+        title: "Hướng dẫn triển khai dạy và học qua mạng",
+        link: "/huong-dan-trien-khai-day-va-hoc-qua-mang-trong-thoi-gian-phong-chong-dich-covid-19",
       },
     ],
   },
   {
     id: 4,
-    title: "Tin tức CNTT",
-    subMenuList: [
-      {
-        id: 40,
-        title: "Trong nước",
-        link: "/trong-nuoc",
-      },
-      {
-        id: 41,
-        title: "Quốc tế",
-        link: "/quoc-te",
-      },
-      {
-        id: 42,
-        title: "Bài viết hay",
-        link: "/bai-viet-hay",
-      },
-    ],
+    title: "Kế hoạch năm",
   },
   {
     id: 5,
-    title: "Hướng dẫn ",
+    title: "Chương trình đào tạo ",
     submenuList: [
       {
         id: 50,
-        title: "Chức năng ",
-        link: "/",
+        title: "Hệ chính quy  ",
+        link: "/chinh-quy",
       },
       {
         id: 51,
-        title: "Nhiệm vụ",
-        link: "/",
-      },
-      {
-        id: 52,
-        title: "Nhân sự ",
-        link: "/",
+        title: "hệ từ xa",
+        link: "/tu-xa",
       },
     ],
   },
   {
     id: 6,
-    title: "Tài liệu",
-    subMenuList: [
+    title: "Lịch",
+    submenuList: [
       {
         id: 60,
-        title: "Quy định - Quy chế",
-        link: "/quy-dinh",
+        title: "TKB",
+        link: "/TKB",
       },
       {
         id: 61,
-        title: "Quy trình",
-        link: "/quy-trinh",
-      },
-      {
-        id: 62,
-        title: "Biểu mẫu",
-        link: "/bieu-mau",
-      },
-    ],
-  },
-  {
-    id: 7,
-    title: "Thủ thuật",
-    subMenuList: [
-      {
-        id: 70,
-        title: "Window",
-        link: "/window",
-      },
-      {
-        id: 71,
-        title: "Linux",
-        link: "/linux",
-      },
-      {
-        id: 72,
-        title: "Mac",
-        link: "/Mac",
-      },
-      {
-        id: 73,
-        title: "Khác",
-        link: "/khac",
-      },
-    ],
-  },
-  {
-    id: 8,
-    title: "Liên hệ",
-    submenuList: [
-      {
-        id: 80,
-        title: "Chức năng ",
-        link: "/",
-      },
-      {
-        id: 81,
-        title: "Nhiệm vụ",
-        link: "/",
-      },
-      {
-        id: 82,
-        title: "Nhân sự ",
-        link: "/",
+        title: "Lịch phòng",
+        link: "/lich-phong",
       },
     ],
   },
@@ -205,12 +161,12 @@ const NavBar = () => {
                 <p>{childItem.title}</p>
               </button>
             </div>
-            {childItem.subMenuList &&
-              childItem.subMenuList.length > 0 &&
+            {childItem.submenuList &&
+              childItem.submenuList.length > 0 &&
               isOpen === childItem.id && (
                 <div className="absolute right-0 z-10 mt-2 w-56 rounded-sm bg-white shadow-lg ring-black ring-opacity-5 focus:outline-none">
                   <div>
-                    {childItem.subMenuList.map((subChildItem) => (
+                    {childItem.submenuList.map((subChildItem) => (
                       <a
                         key={subChildItem.id}
                         href={subChildItem.link}

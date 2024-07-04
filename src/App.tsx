@@ -1,10 +1,11 @@
-import { useState } from "react";
 import "./App.css";
 import Card2 from "./component/Card 2/Card2";
 import Card from "./component/Card1&Login/Card";
 import Login from "./component/Card1&Login/Login";
 import NavBar from "./component/Header/Header";
 import { Routes, Route } from "react-router";
+import { LayoutProps } from "antd";
+import CongTTDT from "./component/Gioi_thieu/Congthongtin";
 
 const MOCK_Data = [
   {
@@ -79,13 +80,8 @@ const MOCK_DATA_Card2 = [
     note: "Địa chỉ website môn học: https://courses.uit.edu.vn, dùng tài khoản chứng thực để đăng nhập (cho SV & GV). Đây là hệ thống hỗ trợ học tập của sinh viên và giảng dạy của giảng viên, nếu khai thác tốt hệ thống này sẽ trở thành kênh thông tin môn học rất...",
   },
 ];
-
-function App() {
-  const DisplayNew = () => {
-    const [activeNew, setActiveNew] = useState(0);
-
-    const handleClick = () => {};
-  };
+const Layout = (props: LayoutProps) => {
+  const { children } = props;
   return (
     <div className="grid-cols-4">
       <NavBar />
@@ -99,36 +95,90 @@ function App() {
               </div>
             </div>
             <div className="col-span-3">
-              <div>
-                <Routes>
-                  <Route
-                    path="/Card2"
-                    element={
-                      <div className="col-span-3">
-                        <Card2
-                          titleNew="PHÒNG DỮ LIỆU & CNTT"
-                          listNew={MOCK_DATA_Card2}
-                        />
-                      </div>
-                    }
-                  />
-                </Routes>
-                <div className=" p-3 ">
-                  <Card title="THÔNG BÁO CHUNG" list={MOCK_Data} />
-                  <Card title="THÔNG BÁO VĂN BẰNG 2" list={MOCK_Data} />
-                  <Card
-                    title="THÔNG BÁO LIÊN THÔNG CHÍNH QUY"
-                    list={MOCK_Data}
-                  />
-                  <Card title="THÔNG BÁO NGHỈ BÙ" list={MOCK_Data} />
-                  <Card title="THÔNG BÁO PHÒNG HỌC" list={MOCK_Data} />
-                </div>
-              </div>
+              <div>{children}</div>
             </div>
           </div>
         </ul>
       </nav>
     </div>
+  );
+};
+function App() {
+  return (
+    // <div className="grid-cols-4">
+    //   <NavBar />
+    //   <nav className="col-span-1">
+    //     <ul>
+    //       <div className="grid grid-cols-4">
+    //         <div className="col-span-1">
+    //           <Login />
+    //           <div className="justify-center">
+    //             <Card title="Tin nổi bật" list={MOCK_Data} />
+    //           </div>
+    //         </div>
+    //         <div className="col-span-3">
+    //           <div>
+    //             <Routes>
+    //               <Route
+    //                 path="/Card2"
+    //                 element={
+    //                   <div className="col-span-3">
+    //                     <Card2
+    //                       titleNew="PHÒNG DỮ LIỆU & CNTT"
+    //                       listNew={MOCK_DATA_Card2}
+    //                     />
+    //                   </div>
+    //                 }
+    //               />
+    //             </Routes>
+    //             <div className=" p-3 ">
+    //               <Card title="THÔNG BÁO CHUNG" list={MOCK_Data} />
+    //               <Card title="THÔNG BÁO VĂN BẰNG 2" list={MOCK_Data} />
+    //               <Card
+    //                 title="THÔNG BÁO LIÊN THÔNG CHÍNH QUY"
+    //                 list={MOCK_Data}
+    //               />
+    //               <Card title="THÔNG BÁO NGHỈ BÙ" list={MOCK_Data} />
+    //               <Card title="THÔNG BÁO PHÒNG HỌC" list={MOCK_Data} />
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>
+    //     </ul>
+    //   </nav>
+    // </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <div className=" p-3 ">
+              <Card title="THÔNG BÁO VĂN BẰNG 2" list={MOCK_Data} />
+              <Card title="THÔNG BÁO CHUNG" list={MOCK_Data} />
+              <Card title="THÔNG BÁO LIÊN THÔNG CHÍNH QUY" list={MOCK_Data} />
+              <Card title="THÔNG BÁO NGHỈ BÙ" list={MOCK_Data} />
+              <Card title="THÔNG BÁO PHÒNG HỌC" list={MOCK_Data} />
+            </div>
+          </Layout>
+        }
+      />
+      <Route
+        path="/Card2"
+        element={
+          <Layout>
+            <Card2 titleNew="PHÒNG DỮ LIỆU & CNTT" listNew={MOCK_DATA_Card2} />
+          </Layout>
+        }
+      />
+      <Route
+        path="/CongTTDT"
+        element={
+          <Layout>
+            <CongTTDT />
+          </Layout>
+        }
+      />
+    </Routes>
   );
 }
 
