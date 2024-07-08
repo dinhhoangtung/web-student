@@ -6,7 +6,7 @@ import NavBar from "./component/Header/Header";
 import { Routes, Route } from "react-router";
 import { LayoutProps } from "antd";
 import CongTTDT from "./component/Gioi_thieu/Congthongtin";
-
+import Admissions from "./Admissions/tuyensinh";
 const MOCK_Data = [
   {
     id: 1,
@@ -85,6 +85,9 @@ const Layout = (props: LayoutProps) => {
   return (
     <div className="grid-cols-4">
       <NavBar />
+      <li>
+        <a href="/tuyensinh">NewWeb</a>
+      </li>
       <nav className="col-span-1">
         <ul>
           <div className="grid grid-cols-4">
@@ -105,48 +108,6 @@ const Layout = (props: LayoutProps) => {
 };
 function App() {
   return (
-    // <div className="grid-cols-4">
-    //   <NavBar />
-    //   <nav className="col-span-1">
-    //     <ul>
-    //       <div className="grid grid-cols-4">
-    //         <div className="col-span-1">
-    //           <Login />
-    //           <div className="justify-center">
-    //             <Card title="Tin nổi bật" list={MOCK_Data} />
-    //           </div>
-    //         </div>
-    //         <div className="col-span-3">
-    //           <div>
-    //             <Routes>
-    //               <Route
-    //                 path="/Card2"
-    //                 element={
-    //                   <div className="col-span-3">
-    //                     <Card2
-    //                       titleNew="PHÒNG DỮ LIỆU & CNTT"
-    //                       listNew={MOCK_DATA_Card2}
-    //                     />
-    //                   </div>
-    //                 }
-    //               />
-    //             </Routes>
-    //             <div className=" p-3 ">
-    //               <Card title="THÔNG BÁO CHUNG" list={MOCK_Data} />
-    //               <Card title="THÔNG BÁO VĂN BẰNG 2" list={MOCK_Data} />
-    //               <Card
-    //                 title="THÔNG BÁO LIÊN THÔNG CHÍNH QUY"
-    //                 list={MOCK_Data}
-    //               />
-    //               <Card title="THÔNG BÁO NGHỈ BÙ" list={MOCK_Data} />
-    //               <Card title="THÔNG BÁO PHÒNG HỌC" list={MOCK_Data} />
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </ul>
-    //   </nav>
-    // </div>
     <Routes>
       <Route
         path="/"
@@ -178,6 +139,7 @@ function App() {
           </Layout>
         }
       />
+      <Route path="/tuyensinh" element={<Admissions />} />
     </Routes>
   );
 }
